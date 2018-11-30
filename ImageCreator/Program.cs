@@ -1,4 +1,6 @@
 ﻿using System;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
 
 namespace ImageCreator
 {
@@ -6,7 +8,8 @@ namespace ImageCreator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello from C#!");
+            var image = new Image<Rgba32>(100, 200);
+            Console.WriteLine($"Image size: {image.Width}x{image.Height}");
         }
     }
 }
